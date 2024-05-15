@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    &__logo {
+        width: 22vw;
+    }
+
+    &__input {
+        border: 1px solid rgb(66, 4, 66);
+        border-radius: 4px;
+        width: 37vw;
+        height: 1rem;
+        cursor: pointer;
+    }
+
+    &__button {
+        width: 5vw;
+        height: 1rem;
+        margin-left: .3rem;
+        border: 1px solid rgb(66, 4, 66);
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+}
