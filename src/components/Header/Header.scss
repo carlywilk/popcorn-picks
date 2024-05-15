@@ -1,28 +1,44 @@
+@use "../../assets/styles/partials/_fontFamily" as *;
+
+* {
+    font-family: 'Avenir';
+}
+
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    
+    flex-direction: column;
+    align-items: center;
+        
     &__logo {
-        width: 22vw;
+        width: 80%;
     }
 
     &__input {
-        border: 1px solid rgb(66, 4, 66);
+        border: 1px solid #FFC300; 
         border-radius: 4px;
-        width: 37vw;
-        height: 1rem;
+        width: 45vw;
+        height: 1.3rem;
         cursor: pointer;
+        font-family: 'Avenir';
+        color: hsl(209, 100%, 20%);;
+        margin: 1.2rem 0;
     }
 
     &__button {
-        width: 5vw;
-        height: 1rem;
+        background-color: #FFC300;
+        width: fit-content;
+        height: 1.2rem;
         margin-left: .3rem;
-        border: 1px solid rgb(66, 4, 66);
+        border: 1px solid #FFC300; 
         border-radius: 4px;
+        font-family: 'Avenir';
+        color:#003566;
         cursor: pointer;
+
     }
 
+}
+
+::placeholder {
+    font-family: 'Avenir';
 }
