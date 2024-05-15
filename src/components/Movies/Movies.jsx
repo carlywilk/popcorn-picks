@@ -1,6 +1,5 @@
 import './Movies.scss';
 
-
 const imageApi = "https://image.tmdb.org/t/p/w1280";
 
 export default function Movies ({poster_path, vote_average, overview}) {
