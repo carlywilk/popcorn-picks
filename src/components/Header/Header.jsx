@@ -4,10 +4,12 @@ import { useState } from 'react';
 
 export function Header({ fetchSearchResults }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [hidePopularMovies, setHidePopularMovies] = useState(false);
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
     fetchSearchResults(searchTerm);
+    setHidePopularMovies(true);
   };
 
   const handleOnChange = (event) => {
@@ -16,9 +18,7 @@ export function Header({ fetchSearchResults }) {
 
   return (
     <header className="header">
-      {/* <div className="header__box"> */}
         <img src={Logo} alt="Site Logo" className='header__logo' />
-      {/* </div> */}
       <div className="header__box">
         <form onSubmit={handleOnSubmit}>
           <input 
@@ -30,6 +30,7 @@ export function Header({ fetchSearchResults }) {
           />
           <button className="header__button" type="submit">Search</button>
         </form>
+        { !hidePopularMovies && <h3 className="movies__popular">Top-Rated Movies</h3>}
       </div>
     </header>
   );
